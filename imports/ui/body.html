@@ -1,0 +1,28 @@
+<body>
+    <header>
+        <div>
+            <h1>Liste des étudiants</h1>
+            <p>Cette application permet de lister les étudiants d'HETIC</p>
+        </div>
+    </header>
+
+    <section>
+        <form class="new-list">
+            <input type="text" name="firstname" placeholder="Prénom" />
+            <input type="text" name="name" placeholder="Nom" />
+            <input type="text" name="github" placeholder="Github" />
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <ul>
+            {{#each lists}}
+                {{> list}}
+            {{/each}}
+        </ul>
+    </section>
+</body>
+
+<template name="list">
+    <li>{{firstname}} {{name}} {{github}}</li>
+</template>
+
